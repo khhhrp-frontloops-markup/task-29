@@ -100,17 +100,51 @@
         </g>
       </symbol>
     </svg>
-    <!-- <svg class="icon icon--20">
-      <use href="#music"></use>
-    </svg>
-    <svg class="icon icon--20">
-      <use href="#rain"></use>
-    </svg>
-    <svg class="icon icon--20">
-      <use href="#sun"></use>
-    </svg>
-    <svg class="icon icon--20">
-      <use href="#tv"></use>
-    </svg> -->
+    <div class="app">
+      <header class="app__header">
+        <div class="weather">
+          <div class="weather__item">
+            <svg class="icon icon--40">
+              <use href="#sun"></use>
+            </svg>
+            <p class="weather__deg weather__deg--large">25°C</p>
+          </div>
+          <div class="weather__item">
+            <svg class="icon icon--25">
+              <use href="#sun"></use>
+            </svg>
+            <p class="weather__day">tue</p>
+            <p class="weather__deg">25°C</p>
+          </div>
+          <div class="weather__item">
+            <svg class="icon icon--25">
+              <use href="#rain"></use>
+            </svg>
+            <p class="weather__day">wed</p>
+            <p class="weather__deg">13°C</p>
+          </div>
+          <div class="weather__item">
+            <svg class="icon icon--25">
+              <use href="#sun"></use>
+            </svg>
+            <p class="weather__day">thu</p>
+            <p class="weather__deg">22°C</p>
+          </div>
+        </div>
+        <div class="datetime">
+          <div class="datetime__date-group">
+            <p class="datetime__weekday">-</p>
+            <p class="datetime__date">-</p>
+          </div>
+          <p class="datetime__time">
+            <time class="time">11:32</time>
+            <span>am</span>
+          </p>
+        </div>
+      </header>
+      <main class="app__main"></main>
+      <footer class="app__footer"></footer>
+    </div>
+    <script src="./src/script.js" type="module"></script>
   </body>
 </html>

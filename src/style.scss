@@ -20,7 +20,14 @@ p {
   margin: 0;
 }
 
-$icon-sizes: 20;
+//color palette
+$dark: #000;
+$light: #fff;
+$blue--light: #aac4ef;
+$gray: #b9bab9;
+
+//svg icon sizes
+$icon-sizes: 25, 40;
 
 .icon {
   display: inline-block;
@@ -47,9 +54,117 @@ $icon-sizes: 20;
 }
 
 body {
-  background-color: rgb(44, 37, 49);
+  display: grid;
+  place-items: center;
+  background-color: $blue--light;
   margin: 0;
   min-height: 100dvh;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.weather {
+  $column-gap: 2.5rem;
+  display: flex;
+  align-items: center;
+  column-gap: $column-gap;
+  overflow-x: auto;
+
+  &--with-mask {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      $dark 20%,
+      $dark 80%,
+      transparent
+    );
+    // padding-right: 20%;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.8rem;
+    flex-shrink: 0;
+    width: calc(25% - (3 * $column-gap / 4));
+  }
+
+  &__day {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__deg {
+    font-size: 1.4rem;
+
+    &--large {
+      font-size: 2.8rem;
+    }
+  }
+}
+
+.datetime {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 3rem;
+
+  &__date-group {
+    text-align: right;
+    font-size: 1.6rem;
+    color: $gray;
+    flex-grow: 1;
+  }
+
+  &__time {
+    color: $light;
+
+    time {
+      font-size: 5rem;
+      font-weight: 100;
+      letter-spacing: 0.5rem;
+    }
+
+    span {
+      text-transform: uppercase;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.app {
+  max-width: 81.6rem;
+  width: 100%;
+  background-color: $light;
+
+  &__header {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10rem;
+    padding: 4rem;
+    background-image: url("./img/background.avif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: $light;
+
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba($dark, 0.7);
+    }
+  }
 }
