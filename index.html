@@ -137,13 +137,132 @@
             <p class="datetime__date">-</p>
           </div>
           <p class="datetime__time">
-            <time class="time">11:32</time>
+            <time class="time">:</time>
             <span>am</span>
           </p>
         </div>
       </header>
-      <main class="app__main"></main>
-      <footer class="app__footer"></footer>
+      <section class="app__section app__section--with-border">
+        <div class="app__section-image">
+          <svg class="icon icon--30">
+            <use href="#tv"></use>
+          </svg>
+        </div>
+        <div class="app__content">
+          <nav class="app__nav"></nav>
+          <div class="app__scroll-container">
+            <article class="card card--video">
+              <div class="card__preview">
+                <img src="./src/img/video-local-programming.avif" alt="image" />
+              </div>
+              <div class="card__info">
+                <p class="card__showtime">6:00 AM - 12:00 PM</p>
+                <h3 class="card__title">Local Programming</h3>
+              </div>
+            </article>
+            <article class="card card--video">
+              <div class="card__preview">
+                <img src="./src/img/video-family-guy.avif" alt="image" />
+              </div>
+              <div class="card__info">
+                <p class="card__showtime">12:00 AM - 13:00 PM</p>
+                <h3 class="card__title">Family Guy</h3>
+              </div>
+            </article>
+            <article class="card card--video">
+              <div class="card__preview">
+                <img src="./src/img/video-simpsons.avif" alt="image" />
+              </div>
+              <div class="card__info">
+                <p class="card__showtime">13:00 AM - 15:00 PM</p>
+                <h3 class="card__title">The Simpsons</h3>
+              </div>
+            </article>
+            <article class="card card--video">
+              <div class="card__preview">
+                <img src="./src/img/video-futurama.avif" alt="image" />
+              </div>
+              <div class="card__info">
+                <p class="card__showtime">15:00 AM - 17:00 PM</p>
+                <h3 class="card__title">Futurama</h3>
+              </div>
+            </article>
+            <article class="card card--video">
+              <div class="card__preview">
+                <img src="./src/img/video-american-dad.avif" alt="image" />
+              </div>
+              <div class="card__info">
+                <p class="card__showtime">17:00 AM - 19:00 PM</p>
+                <h3 class="card__title">American Dad</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="app__section">
+        <div class="app__section-image">
+          <svg class="icon icon--30">
+            <use href="#music"></use>
+          </svg>
+        </div>
+        <div class="app__content app__content--with-flex">
+          <div class="music-player">
+            <div class="music-player__info">
+              <div class="music-player__image">
+                <img src="./src/img/music-with-you.avif" alt="image" />
+              </div>
+              <div class="music-player__content">
+                <h3 class="music-player__song">I'm with you</h3>
+                <h2 class="music-player__artist">Red Hot Chili Peppers</h2>
+              </div>
+            </div>
+            <div class="music-player__time-tracker">
+              <span class="music-player__current-time">0:59</span>
+              <progress
+                max="100"
+                value="30"
+                class="music-player__soundline"
+              ></progress>
+              <span class="music-player__total-time">3:51</span>
+            </div>
+          </div>
+
+          <div class="app__scroll-container">
+            <article class="card card--music">
+              <div class="card__preview">
+                <img src="./src/img/music-with-you.avif" alt="image" />
+              </div>
+              <div class="card__info">
+                <h3 class="card__title">I'm with you</h3>
+              </div>
+            </article>
+            <article class="card card--music">
+              <div class="card__preview">
+                <img src="./src/img/music-butter.avif" alt="image" />
+              </div>
+              <div class="card__info">
+                <h3 class="card__title">Butter</h3>
+              </div>
+            </article>
+            <article class="card card--music">
+              <div class="card__preview">
+                <img src="./src/img/music-back-together.avif" alt="image" />
+              </div>
+              <div class="card__info">
+                <h3 class="card__title">Back Together</h3>
+              </div>
+            </article>
+            <article class="card card--music">
+              <div class="card__preview">
+                <img src="./src/img/music-unwind.avif" alt="image" />
+              </div>
+              <div class="card__info">
+                <h3 class="card__title">Unwind</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
     </div>
     <script src="./src/script.js" type="module"></script>
   </body>

@@ -2,6 +2,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const datetimeDate = document.querySelector(".datetime__date");
   const datetimeWeek = document.querySelector(".datetime__weekday");
   const weather = document.querySelector(".weather");
+  const appButtons = [
+    { title: "FOX", className: "app__btn app__btn--active" },
+    { title: "abc", className: "app__btn" },
+    { title: "National Geographic", className: "app__btn" },
+    { title: "CNN", className: "app__btn" },
+    { title: "Nickelodeon", className: "app__btn" },
+  ];
 
   function getFormattedDate(date) {
     const monthList = {
@@ -77,4 +84,12 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(updateTime, 1000);
 
   updateTime();
+
+  function createBtn(obj) {
+    const { title, className } = obj;
+    const btn = `<button type="button" class="${className}">${title}</button>`;
+    document.querySelector(".app__nav").insertAdjacentHTML("beforeend", btn);
+  }
+
+  appButtons.forEach(createBtn);
 });
