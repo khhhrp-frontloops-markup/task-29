@@ -192,6 +192,10 @@ body {
         &__preview {
           scale: 1.2;
           z-index: 1;
+
+          &::after {
+            opacity: 1;
+          }
         }
       }
     }
@@ -208,6 +212,23 @@ body {
       position: absolute;
       inset: 0;
       background-color: rgba($dark, 0.3);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: 5rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: rgba($dark, 0.7);
+      background-image: url("../src/img/play.svg");
+      background-size: 30%;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 300ms ease;
     }
 
     img {
@@ -258,6 +279,7 @@ body {
     position: relative;
     width: 6rem;
     aspect-ratio: 1 / 1;
+    flex-shrink: 0;
 
     img {
       display: block;
@@ -277,7 +299,7 @@ body {
   &__content {
     display: flex;
     flex-direction: column;
-    row-gap: 0.2rem;
+    row-gap: 0.5rem;
     flex-grow: 1;
   }
 
